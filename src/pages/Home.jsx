@@ -7,12 +7,20 @@ export default function Home() {
   const { tentangKami, produkUnggulan, callToAction } = dataUMKM;
   const [selectedProduk, setSelectedProduk] = useState(null);
   const [showAllProdukModal, setShowAllProdukModal] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cart, setCart] = useState([]); // State untuk keranjang
   const [cartVisible, setCartVisible] = useState(false); // Untuk menampilkan cart
   const testimonies = dataUMKM.testimoni;
   const totalSlides = testimonies.length;
+
+  // fitur search
+  const handleSearch = (term) => {
+    setSearchTerm(term.toLowerCase());
+    setShowSearchModal(true); // Buka modal saat pencarian dimulai
+  };
 
   const getVisibleTestimonials = () => {
     const visible = [];
@@ -71,6 +79,7 @@ export default function Home() {
         <Navbar
           cartCount={cartCount}
           onCartClick={() => setCartVisible(true)}
+          onSearch={handleSearch}
         />
       </div>
 
@@ -244,7 +253,7 @@ export default function Home() {
                 <iframe
                   src={dataUMKM.kontak.mapsEmbedUrl}
                   width="100%"
-                  height="100%"
+                  height="100"
                   className="rounded-xl w-full h-full"
                   loading="lazy"
                   title="Lokasi UMKM"
@@ -374,14 +383,61 @@ export default function Home() {
         </div>
       )}
 
-      {/* Ikon Keranjang */}
-      <div
-        className="fixed bottom-10 right-10 bg-yellow-500 text-white p-4 rounded-full shadow-lg flex items-center gap-2 cursor-pointer"
-        onClick={() => setCartVisible(true)}
-      >
-        <FaShoppingCart />
-        <span className="font-semibold">{cartCount} Produk</span>
-      </div>
+      {/* Search Modal */}
+      {showSearchModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white max-w-5xl w-full max-h-[80vh] overflow-y-auto rounded-lg shadow-xl p-6 relative">
+            <button
+              onClick={() => setShowSearchModal(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-indigo-700 text-center">
+              Hasil Pencarian: "{searchTerm}"
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {produkUnggulan
+                .filter((produk) =>
+                  produk.nama.toLowerCase().includes(searchTerm)
+                )
+                .map((produk) => (
+                  <div
+                    key={produk.id}
+                    className="border p-4 rounded shadow hover:shadow-md transition"
+                  >
+                    <img
+                      src={produk.gambar}
+                      alt={produk.nama}
+                      className="w-full h-40 object-cover rounded mb-2"
+                    />
+                    <h3 className="font-semibold text-lg text-indigo-800">
+                      {produk.nama}
+                    </h3>
+                    <p className="text-sm text-gray-600">{produk.deskripsi}</p>
+                    <p className="font-bold text-indigo-600 mt-2">
+                      Rp {produk.harga}
+                    </p>
+                    <button
+                      onClick={() => handleAddToCart(produk)}
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-full mt-3"
+                    >
+                      Tambah ke Keranjang
+                    </button>
+                  </div>
+                ))}
+              {produkUnggulan.filter((produk) =>
+                produk.nama.toLowerCase().includes(searchTerm)
+              ).length === 0 && (
+                <p className="text-center text-gray-500 col-span-full">
+                  Produk tidak ditemukan.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
