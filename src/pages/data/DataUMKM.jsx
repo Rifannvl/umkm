@@ -66,7 +66,7 @@ const dataUMKM = {
       deskripsi: "Sabun alami dari bahan herbal lokal.",
       harga: 25000,
       gambar:
-        "https://cdn.pixabay.com/photo/2016/11/29/03/20/soap-1861087_960_720.jpg",
+        "https://img.freepik.com/free-photo/macadamia-soap-skin-care-treatment_1150-42794.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 8,
@@ -74,7 +74,7 @@ const dataUMKM = {
       deskripsi: "Dompet kulit asli buatan tangan.",
       harga: 65000,
       gambar:
-        "https://cdn.pixabay.com/photo/2016/03/27/20/57/wallet-1281235_960_720.jpg",
+        "https://img.freepik.com/premium-photo/black-leather-wallet-isolated-white-background_184700-3172.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 9,
@@ -82,7 +82,7 @@ const dataUMKM = {
       deskripsi: "Biji kopi pilihan dari petani lokal.",
       harga: 30000,
       gambar:
-        "https://cdn.pixabay.com/photo/2015/09/02/12/35/coffee-918926_960_720.jpg",
+        "https://img.freepik.com/free-photo/product-branding-packaging_23-2150965857.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 10,
@@ -90,7 +90,7 @@ const dataUMKM = {
       deskripsi: "Kain batik cap dengan motif khas Jawa.",
       harga: 90000,
       gambar:
-        "https://cdn.pixabay.com/photo/2020/06/21/17/51/batik-5325281_960_720.jpg",
+        "https://img.freepik.com/premium-photo/close-up-garment-against-black-background_1048944-3768187.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 11,
@@ -98,7 +98,7 @@ const dataUMKM = {
       deskripsi: "Topi dari daun pandan, cocok untuk wisata.",
       harga: 22000,
       gambar:
-        "https://cdn.pixabay.com/photo/2014/11/07/21/39/hat-521302_960_720.jpg",
+        "https://img.freepik.com/free-photo/fashionable-fedora-hat-studio_23-2150744028.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 12,
@@ -106,7 +106,7 @@ const dataUMKM = {
       deskripsi: "Aksesoris gelang dari kayu kelapa.",
       harga: 18000,
       gambar:
-        "https://cdn.pixabay.com/photo/2020/01/28/06/29/bracelet-4798763_960_720.jpg",
+        "https://img.freepik.com/premium-photo/bangle-wood-isolated-white-background_42547-2210.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 13,
@@ -114,7 +114,7 @@ const dataUMKM = {
       deskripsi: "Campuran daun teh dan rempah untuk kesehatan.",
       harga: 28000,
       gambar:
-        "https://cdn.pixabay.com/photo/2016/07/19/09/47/tea-1528889_960_720.jpg",
+        "https://img.freepik.com/free-photo/front-view-tea-herbal-concept-with-copy-space_23-2148555200.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 14,
@@ -122,7 +122,7 @@ const dataUMKM = {
       deskripsi: "Lilin wangi handmade untuk relaksasi.",
       harga: 35000,
       gambar:
-        "https://cdn.pixabay.com/photo/2015/07/02/10/28/candle-828350_960_720.jpg",
+        "https://img.freepik.com/free-photo/front-view-epiphany-day-candles-with-copy-space-gift-box_23-2148746758.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
     {
       id: 15,
@@ -130,7 +130,7 @@ const dataUMKM = {
       deskripsi: "Syal tenun tradisional yang lembut dan hangat.",
       harga: 48000,
       gambar:
-        "https://cdn.pixabay.com/photo/2017/01/07/10/36/wool-1964286_960_720.jpg",
+        "https://img.freepik.com/free-psd/3d-rendering-winter-icon_23-2151869769.jpg?ga=GA1.1.474091255.1747151520&semt=ais_hybrid&w=740",
     },
   ],
   //   callToAction
@@ -192,7 +192,8 @@ const dataUMKM = {
     alamat: "Jl. UMKM No. 123, Yogyakarta",
     telepon: "0812-3456-7890",
     email: "umkm@example.com",
-    mapsEmbedUrl: "https://www.google.com/maps/embed?...",
+    mapsEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43962.766757121135!2d110.41278894536238!3d-7.713321705531205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5e970cd4fa51%3A0xa527d07122b90c40!2sUniversitas%20Islam%20Indonesia!5e0!3m2!1sid!2sid!4v1747159292622!5m2!1sid!2sid",
   },
 };
 
