@@ -328,7 +328,11 @@ export default function Home() {
                   <div className="flex justify-center mt-6">
                     <button
                       className="bg-indigo-600 text-white py-2 px-6 rounded-full font-semibold"
-                      onClick={() => alert("Pesanan berhasil")}
+                      onClick={() => {
+                        alert("Pesanan berhasil");
+                        setCart([]);
+                        setCartVisible(false);
+                      }}
                     >
                       Checkout
                     </button>
